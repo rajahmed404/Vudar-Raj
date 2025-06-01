@@ -20,11 +20,11 @@ modified : [JOY-BOT](https://replit.com/@joyahmed404) by ```JOY AHMED```
 ## Appstate Getter
 
 - use this Appstate Getter to prevent dimiss notification account from your bot account
-  here: https://joncll.serv00.net/apst.html
+  here: 
 
 ## OLD UPDATES
 
-• configure console output in ``ryuko/configs/console.js``.</br>
+• configure console output in ``Joy/configs/console.js``.</br>
 • fixed spam in ban system.</br>
 • discover the new feature with ```premium command```, you can enable it by adding a variable named ```premium``` and the value is boolean</br></br>
 ```premium ussage example```
@@ -77,9 +77,9 @@ remove box from approved list
 approve remove 4834812366643016
 ```
 
-## HOW TO GET 'RYUKOSTATE.JSON' DATA?
+## HOW TO GET 'JOYSTATE.JSON' DATA?
 
-to get ``ryukostate.json`` data, please follow these steps :</br>
+to get ``Joystate.json`` data, please follow these steps :</br>
 
 step 1 : download fbstate exporter [here](https://www.mediafire.com/file/vyy6jbo7ul2d3th/fbstate_exporter-1.0.xpi+(1).zip/file)</br>
 
