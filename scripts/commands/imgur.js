@@ -2,7 +2,7 @@ module.exports.config = {
   name: "imgur",
   version: "1.0.0",
   permission: 0,
-  credits: "Nayan",
+  credits: "JOY",
   description: "",
   prefix: true,
   category: "user",
@@ -18,7 +18,7 @@ module.exports.run = async ({ api, event, args }) => {
 
   let linkanh = event.messageReply?.attachments[0]?.url || args.join(" ");
   if (!linkanh) {
-    return api.sendMessage('[⚜️]➜ Please provide an image or video link.', event.threadID, event.messageID);
+    return api.sendMessage('[🌺]➜ Please provide an image or video link.', event.threadID, event.messageID);
   }
 
   try {
@@ -26,7 +26,7 @@ module.exports.run = async ({ api, event, args }) => {
 
 
     if (!/^https?:\/\//.test(linkanh)) {
-      return api.sendMessage('[⚜️]➜ Invalid URL: URL must start with http:// or https://', event.threadID, event.messageID);
+      return api.sendMessage('[🌺]➜ Invalid URL: URL must start with http:// or https://', event.threadID, event.messageID);
     }
 
 
@@ -36,7 +36,7 @@ module.exports.run = async ({ api, event, args }) => {
       url: linkanh
     }];
 
-    const apis = await axios.get('https://raw.githubusercontent.com/MOHAMMAD-NAYAN-07/Nayan/main/api.json');
+    const apis = await axios.get('https://raw.githubusercontent.com/JUBAED-AHMED-JOY/Joy/main/api.json');
     const n = apis.data.api;
     const allPromises = attachments.map(item => {
       const encodedItemUrl = encodeURIComponent(item.url);
@@ -49,9 +49,9 @@ module.exports.run = async ({ api, event, args }) => {
     const imgurLinks = results.map(result => result.data.success ? result.data.link : 'Upload failed');
 
 
-    return api.sendMessage(`Uploaded Imgur Links:\n${imgurLinks.join('\n')}`, event.threadID, event.messageID);
+    return api.sendMessage(`${imgurLinks.join('\n')}`, event.threadID, event.messageID);
   } catch (e) {
     console.error(e);
-    return api.sendMessage('[⚜️]➜ An error occurred while uploading the image or video.', event.threadID, event.messageID);
+    return api.sendMessage('[🌺]➜ An error occurred while uploading the image or video.', event.threadID, event.messageID);
   }
 };
